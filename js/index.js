@@ -43,7 +43,15 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // ----------------  Task 1  ------------------->
 
+const navSelection = document.querySelectorAll('a');
+navSelection[0].textContent = "Services";
+navSelection[1].textContent = "Products";
+navSelection[2].textContent = "Vision";
+navSelection[3].textContent = "Features";
+navSelection[4].textContent = "About";
+navSelection[5].textContent = "Contact";
 
+const navColor  = document.querySelector('a').style.color = "green";
 
 const cta = document.querySelector('.cta-text h1');cta.textContent = "DOM Is Awesome";
 
@@ -51,9 +59,44 @@ const btn = document.querySelector('.cta-text button');btn.textContent = "Get St
 
 let header_img = document.getElementById('cta-img');
 header_img.setAttribute('src', siteContent["cta"]["img-src"])
-// ----------------  Task 2  ------------------->
+
+const topContent = document.querySelectorAll('div');
+
+const  features = document.querySelector('.top-content .text-content h4');features.textContent = "Features";
+
+const  features_p = document.querySelector('.top-content .text-content p');features_p.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+// const  about = document.querySelector('.text-content h4');about.textContent = "About";
+
+// const  about_p = document.querySelector('.text-content p');about_p.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+
+
+let middle_img = document.getElementById('middle-img');
+middle_img.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+const  services = document.querySelector('.bottom-content .text-content h4');services.textContent = "Services";
+
+const  services_p = document.querySelector('.bottom-content .text-content p');services_p.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+// const  about = document.querySelector('.text-content h4');about.textContent = "About";
+
+// const  about_p = document.querySelector('.text-content p');about_p.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+// const  about = document.querySelector('.text-content h4');about.textContent = "About";
+
+// const  about_p = document.querySelector('.text-content p');about_p.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+const contact = document.querySelector('.contact h4');
+contact.textContent = "Contact";
+
+const footer = document.querySelector('footer p');
+footer.textContent = "Copyright Great Idea! 2018";
+// ----------------  Task 2  -------------------->
 
 
 // ----------------  Task 3  ------------------->
+
 
 
