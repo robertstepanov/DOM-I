@@ -50,12 +50,10 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 //  --------------   Header/Navigation  ------------------>
 const navSelection = document.querySelectorAll("a");
-navSelection[0].textContent = siteContent["nav"]["nav-item-1"];
-navSelection[1].textContent = siteContent["nav"]["nav-item-2"];
-navSelection[2].textContent = siteContent["nav"]["nav-item-3"];
-navSelection[3].textContent = siteContent["nav"]["nav-item-4"];
-navSelection[4].textContent = siteContent["nav"]["nav-item-5"];
-navSelection[5].textContent = siteContent["nav"]["nav-item-6"];
+
+navSelection.forEach((a, i) => {
+  a.textContent = siteContent["nav"][`nav-item-${[i]}`];
+});
 
 //  --------------  CTA Section   ------------------>
 
