@@ -58,11 +58,12 @@ navSelection[4].textContent = "About";
 navSelection[5].textContent = "Contact";
 
 //  --------------  CTA Section   ------------------>
-const cta = document.querySelector(".cta-text h1");
-cta.textContent = "DOM Is Awesome";
 
-const btn = document.querySelector(".cta-text button");
-btn.textContent = "Get Started";
+let ctaHeading = document.querySelector("h1");
+ctaHeading.textContent = siteContent["cta"]["h1"];
+
+let ctaButton = document.querySelector("button");
+ctaButton.textContent = siteContent["cta"]["button"];
 
 let header_img = document.getElementById("cta-img");
 header_img.setAttribute("src", siteContent["cta"]["img-src"]);
@@ -72,18 +73,16 @@ header_img.setAttribute("src", siteContent["cta"]["img-src"]);
 let topContent_titles = document.querySelectorAll(
   ".main-content .top-content .text-content h4"
 );
-topContent_titles[0].textContent = "Features";
-topContent_titles[1].textContent = "About";
+topContent_titles[0].textContent = siteContent["main-content"]["features-h4"];
+topContent_titles[1].textContent = siteContent["main-content"]["about-h4"];
 
 const topContent = document.querySelectorAll(
   ".main-content .top-content .text-content p"
 );
 
-topContent[0].textContent =
-  "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+topContent[0].textContent = siteContent["main-content"]["features-content"];
 
-topContent[1].textContent =
-  "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+topContent[1].textContent = siteContent["main-content"]["about-content"];
 
 //  --------------   Middle Image   ------------------>
 let middle_img = document.getElementById("middle-img");
@@ -94,37 +93,49 @@ middle_img.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 let bottomContent_titles = document.querySelectorAll(
   ".main-content .bottom-content .text-content h4"
 );
-bottomContent_titles[0].textContent = "Services";
-bottomContent_titles[1].textContent = "Products";
-bottomContent_titles[2].textContent = "Vision";
+bottomContent_titles[0].textContent =
+  siteContent["main-content"]["services-h4"];
+bottomContent_titles[1].textContent = siteContent["main-content"]["product-h4"];
+bottomContent_titles[2].textContent = siteContent["main-content"]["vision-h4"];
 
 const bottomContent = document.querySelectorAll(
   ".main-content .bottom-content .text-content p"
 );
 
-bottomContent[0].textContent =
-  "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+bottomContent[0].textContent = siteContent["main-content"]["services-content"];
 
-bottomContent[1].textContent =
-  "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+bottomContent[1].textContent = siteContent["main-content"]["product-content"];
 
-bottomContent[2].textContent =
-  "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+bottomContent[2].textContent = siteContent["main-content"]["vision-content"];
 
 //  --------------   Contact Section   ------------------>
 const contact = document.querySelector(".contact h4");
-contact.textContent = "Contact";
+contact.textContent = siteContent["contact"]["contact-h4"];
 
 const contact_p = document.querySelectorAll(".contact p");
-contact_p[0].textContent = "123 Way 456 Street Somewhere, USA";
-contact_p[1].textContent = "1 (888) 888-8888";
-contact_p[2].textContent = "sales@greatidea.io";
+contact_p[0].textContent = siteContent["contact"]["address"];
+contact_p[1].textContent = siteContent["contact"]["phone"];
+contact_p[2].textContent = siteContent["contact"]["email"];
 
 //  --------------   Footer   ------------------>
 const footer = document.querySelector("footer p");
-footer.textContent = "Copyright Great Idea! 2018";
+footer.textContent = siteContent["footer"]["copyright"];
 
 //  -------------- Task 3  --------------------->
+
+const blogNav = document.createElement("a");
+
+blogNav.textContent = "Blog";
+
+const blogParent = document.querySelector("nav");
+blogParent.append(blogNav);
+
+const galleryNav = document.createElement("a");
+
+galleryNav.textContent = "Gallery";
+
+const galleryParent = document.querySelector("nav");
+galleryParent.prepend(galleryNav);
 
 const navColor = document.querySelectorAll("a");
 navColor.forEach(element => {
