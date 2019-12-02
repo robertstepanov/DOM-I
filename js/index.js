@@ -50,12 +50,12 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 //  --------------   Header/Navigation  ------------------>
 const navSelection = document.querySelectorAll("a");
-navSelection[0].textContent = "Services";
-navSelection[1].textContent = "Products";
-navSelection[2].textContent = "Vision";
-navSelection[3].textContent = "Features";
-navSelection[4].textContent = "About";
-navSelection[5].textContent = "Contact";
+navSelection[0].textContent = siteContent["nav"]["nav-item-1"];
+navSelection[1].textContent = siteContent["nav"]["nav-item-2"];
+navSelection[2].textContent = siteContent["nav"]["nav-item-3"];
+navSelection[3].textContent = siteContent["nav"]["nav-item-4"];
+navSelection[4].textContent = siteContent["nav"]["nav-item-5"];
+navSelection[5].textContent = siteContent["nav"]["nav-item-6"];
 
 //  --------------  CTA Section   ------------------>
 
@@ -99,7 +99,7 @@ newButton.classList.add("button");
 const buttonParent = document.querySelector(".cta-text");
 buttonParent.append(newButton);
 
-const bg = (document.body.style.backgroundColor = "white");
+const bg = (document.body.style.background = "white");
 let isColored = false;
 newButton.addEventListener("click", function() {
   if (isColored) {
