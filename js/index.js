@@ -46,7 +46,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-// ----------------  Task 1  ------------------->
+//  --------------   Tasks 1 and 2   ----------->
 
 //  --------------   Header   ------------------>
 const navSelection = document.querySelectorAll("a");
@@ -56,8 +56,6 @@ navSelection[2].textContent = "Vision";
 navSelection[3].textContent = "Features";
 navSelection[4].textContent = "About";
 navSelection[5].textContent = "Contact";
-
-const navColor = (document.querySelector("a").style.color = "green");
 
 //  --------------  CTA Section   ------------------>
 const cta = document.querySelector(".cta-text h1");
@@ -125,6 +123,10 @@ contact_p[2].textContent = "sales@greatidea.io";
 //  --------------   Footer   ------------------>
 const footer = document.querySelector("footer p");
 footer.textContent = "Copyright Great Idea! 2018";
-// ----------------  Task 2  -------------------->
 
-// ----------------  Task 3  ------------------->
+//  -------------- Task 3  --------------------->
+
+const navColor = document.querySelectorAll("a");
+navColor.forEach(element => {
+  element.style.color = "green";
+});
