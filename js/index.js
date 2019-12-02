@@ -48,7 +48,7 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 //  --------------   Tasks 1 and 2   ----------->
 
-//  --------------   Header   ------------------>
+//  --------------   Header/Navigation  ------------------>
 const navSelection = document.querySelectorAll("a");
 navSelection[0].textContent = "Services";
 navSelection[1].textContent = "Products";
@@ -88,6 +88,29 @@ topContent[1].textContent = siteContent["main-content"]["about-content"];
 let middle_img = document.getElementById("middle-img");
 middle_img.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
+//  --------------  Stretch - New Button to change BG color  ------------->
+
+const newButton = document.createElement("button");
+
+newButton.textContent = "Change BG Color";
+
+newButton.classList.add("button");
+
+const buttonParent = document.querySelector(".cta-text");
+buttonParent.append(newButton);
+
+const bg = (document.body.style.backgroundColor = "white");
+let isColored = false;
+newButton.addEventListener("click", function() {
+  if (isColored) {
+    document.body.style.background = "white";
+    isColored = false;
+  } else {
+    document.body.style.background = "lightblue";
+    isColored = true;
+  }
+});
+
 //  --------------   Bottom Section   ------------------>
 
 let bottomContent_titles = document.querySelectorAll(
@@ -123,6 +146,8 @@ footer.textContent = siteContent["footer"]["copyright"];
 
 //  -------------- Task 3  --------------------->
 
+//  --------------  Create 2 new Nav Links  ----------->
+
 const blogNav = document.createElement("a");
 
 blogNav.textContent = "Blog";
@@ -136,6 +161,8 @@ galleryNav.textContent = "Gallery";
 
 const galleryParent = document.querySelector("nav");
 galleryParent.prepend(galleryNav);
+
+//  ---------------   Change Nav Link Color  ---------->
 
 const navColor = document.querySelectorAll("a");
 navColor.forEach(element => {
