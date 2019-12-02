@@ -88,6 +88,16 @@ topContent[1].textContent = siteContent["main-content"]["about-content"];
 let middle_img = document.getElementById("middle-img");
 middle_img.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
+middle_img.addEventListener("mouseover", function() {
+  document.getElementById("middle-img").style.width = "900px";
+  document.getElementById("middle-img").style.height = "400px";
+});
+
+middle_img.addEventListener("mouseleave", function() {
+  document.getElementById("middle-img").style.width = "100%";
+  document.getElementById("middle-img").style.height = "100%";
+});
+
 //  --------------  Stretch - New Button to change BG color  ------------->
 
 const newButton = document.createElement("button");
